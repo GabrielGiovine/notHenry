@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de Contenido</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <h1>Proyecto M1</h1>
+    
+    <h1 id="titulo">Not Henry</h1>
+    <h1>Sobre Mi</h1>
+    <div class="descripcion-container">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="Imagen 1">
+            <h3>Me encanta JavaScript</h3>
+            <p>Manden ayuda.jpg</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="Imagen 2">
+            <h3>Hoy conoci a CSS</h3>
+            <p>Es mas facil... creo...</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="Imagen 3">
+            <h3>Hice esto en esta cosa</h3>
+            <p>Las 3 imagenes estan en el archivo de esta cosa</p>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h4>Mis peliculas favoritas</h4>
+        <input type="text" id="tittle" placeholder="Nombre de la actividad">
+        <br>
+        <textarea id="descripcion" placeholder="Descripción de la actividad"></textarea>
+        <br>
+        <input type="text" id="imagenURL" placeholder="Link de la imagen">
+        <button id="submitBtn">Agregar actividad</button>
+    
+        <div id="resultado" class="hidden">
+            <h3 id="mostrarTitulo"></h3>
+            <p id="mostrarDescripcion"></p>
+            <img id="mostrarImagen" src="" alt="Imagen ingresada">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

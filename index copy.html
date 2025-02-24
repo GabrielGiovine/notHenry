@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contenido</title>
+    <style>
+        .cuadrado{
+            border: 1px solid black;
+            width: 5em;
+            height: 5em;
+        }
+        .rojo{
+            background-color: red;
+        }
+        .verde{
+            background-color: green;
+        }
+        </style>
+</head>
+<body>
+    <h1 id="titulo">Titulo</h1>
+    <p></p>
+    <button id="agregar">Agregar</button>
+    <div class="cuadrado"></div>
+    <div class="container">
+        <button id="cargarImagen">Cargar Imagen</button>
+        <button id="eliminarImagen">Eliminar</button>
+
+    </div>
+    <script>
+        //hacer que el body sea un elemento en el script
+        const body = document.getElementsByTagName("body")[0];
+        //darle clic al boton
+        const agregar = document.getElementById("agregar");
+        const cb = () =>{
+            console.log("probando...");
+            cuadrado.classList.add("verde");
+            //crear un elemento
+            //Variable que lo guarda     Evento
+            const nuevoDiv = document.createElement("div");
+            //Darle propiedad al div
+            nuevoDiv.classList.add("cuadrado");
+            nuevoDiv.classList.add("rojo");
+                //Darle la capacidad de interactuar al boton creado
+            nuevoDiv.addEventListener("click", (event) => {
+                event.target.remove();
+            })
+
+            //Darle la capacidad de aparecer, insertarlo al body
+            body.appendChild(nuevoDiv);
+        };
+        agregar.addEventListener("click", cb);
+
+        
+
+        //cargar imagen
+        //buscar el contenedor que Yo quiera
+        const container = document.querySelector(".container")
+        const cargarImagen = document.getElementById("cargarImagen")
+                const ci = () =>{
+                    container.classList.add("cuadrado")
+                }
+                cargarImagen.addEventListener("click", ci)
+        </script>
+</body>
+<script src="script copy.js"></script>
+<h5>Aplicacion Creada por <p> Gabriel Giovine</p></h5>
+</html>
